@@ -1,11 +1,24 @@
 'use client'
 
-import Image from "next/image";
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import Image from 'next/image';
+
 import { useState, useEffect } from "react";
+
+interface Project {
+  id: number;
+  name: string;
+  html_url: string;
+  description: string;
+  topics: string[];
+  language: string;
+  stargazers_count: number;
+  updated_at: string;
+}
 
 export default function Home() {
   const [showScrollTop, setShowScrollTop] = useState(false)
-  const [projects, setProjects] = useState([])
+  const [projects, setProjects] = useState<Project[]>([])
   const [activeTab, setActiveTab] = useState('hakkimda')
 
   useEffect(() => {
@@ -19,14 +32,16 @@ export default function Home() {
       setShowScrollTop(window.scrollY > 300)
     }
 
-    const fetchProjects = async () => {
+    const fetchProjects = async (): Promise<Project[]> => {
       try {
-        const response = await fetch('/api/github')
+        const response = await fetch('https://api.github.com/users/nurksbr/repos') // GitHub API'den projeleri al
         if (!response.ok) throw new Error('Projeler yüklenemedi')
-        const data = await response.json()
+        const data: Project[] = await response.json() // Projeleri Project tipinde al
         setProjects(data)
+        return data
       } catch (error) {
         console.error('GitHub projeleri yüklenirken hata:', error)
+        return []
       }
     }
 
@@ -307,7 +322,7 @@ export default function Home() {
         {activeTab === 'projeler' && (
           <section className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8">
-              {projects.map((project: any) => (
+              {projects.map((project: Project) => (
                 <a 
                   key={project.name}
                   href={project.html_url}
