@@ -62,8 +62,8 @@ export default function Home() {
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-20">
         <div className="flex flex-col items-center text-center">
-          <h1 className="text-5xl font-bold text-gray-900">MERHABA BEN Fevziye Nur Kesebir</h1>
-          <p className="text-xl text-gray-700 mb-8 max-w-2xl">
+          <h1 className="text-5xl font-semibold text-gray-800">MERHABA BEN Fevziye Nur Kesebir</h1>
+          <p className="text-xl text-gray-600 mb-8 max-w-2xl">
             Full Stack Developer olarak modern web teknolojileri ile kullanıcı dostu ve ölçeklenebilir uygulamalar geliştiriyorum.
           </p>
         </div>
