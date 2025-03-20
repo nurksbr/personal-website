@@ -102,13 +102,29 @@ export default function Home() {
           {/* Hakkımda Tab */}
           {activeTab === 'hakkimda' && (
             <section className="max-w-4xl mx-auto space-y-8">
+              <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-xl overflow-hidden border border-violet-100 p-8">
+                <h3 className="text-2xl font-semibold text-gray-900 mb-6">Hakkımda</h3>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  Merhaba! Ben Fevziye Nur Kesebir, tutkulu bir yazılım geliştiricisiyim. Modern web teknolojileri ile kullanıcı dostu ve ölçeklenebilir uygulamalar geliştirme konusunda kendimi sürekli olarak geliştiriyorum.
+                </p>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  GitHub profilimde, çeşitli projelerimle yazılım geliştirme becerilerimi sergiliyorum. <a href="https://github.com/nurksbr" target="_blank" rel="noopener noreferrer" className="text-violet-600 hover:underline">GitHub Profilim</a> üzerinden erişebileceğiniz projelerim arasında, React ve Next.js kullanarak geliştirdiğim dinamik web uygulamaları, Python ile gerçekleştirdiğim makine öğrenimi projeleri ve daha fazlası yer alıyor. Her bir proje, problem çözme yeteneklerimi ve yaratıcı düşünme becerilerimi yansıtıyor.
+                </p>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  LinkedIn profilimde ise, profesyonel deneyimlerimi ve eğitimimi paylaşıyorum. <a href="https://www.linkedin.com/in/fevziyenurkesebir/" target="_blank" rel="noopener noreferrer" className="text-violet-600 hover:underline">LinkedIn Profilim</a> üzerinden bağlantı kurarak, iş dünyasındaki gelişmelerimi takip edebilir ve benimle iletişime geçebilirsiniz.
+                </p>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  Yazılım geliştirme yolculuğumda, kullanıcı deneyimini ön planda tutarak, etkileyici ve işlevsel arayüzler tasarlamayı hedefliyorum. Özellikle doğal dil işleme ve görüntü işleme alanlarında kendimi geliştirmeye çalışıyorum.
+                </p>
+                <p className="text-gray-600 leading-relaxed">
+                  Hedefim, teknoloji ve yaratıcılığı birleştirerek, insanların hayatını kolaylaştıran çözümler üretmek. Sürekli öğrenme ve yenilik peşinde koşarak, yazılım dünyasında kendime sağlam bir yer edinmeyi amaçlıyorum.
+                </p>
+              </div>
+
               {/* Kişisel Bilgiler */}
               <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-xl overflow-hidden border border-violet-100">
                 <div className="p-8">
                   <p className="text-gray-600 leading-relaxed">
-                    Merhaba! Ben Fevziye Nur Kesebir. Yazılım geliştirme konusunda tutkulu ve sürekli öğrenmeye açık biriyim. Modern web teknolojileri ve yapay zeka alanlarında çalışmalar yapıyorum.
-                  </p>
-                  <p className="text-gray-600 leading-relaxed mt-4">
                     Şu anda Next.js, React ve TypeScript ile modern web uygulamaları geliştirirken, Python ile yapay zeka ve makine öğrenmesi projeleri üzerinde çalışıyorum. Özellikle doğal dil işleme ve görüntü işleme alanlarında kendimi geliştirmeye çalışıyorum.
                   </p>
                   <p className="text-gray-600 leading-relaxed mt-4">
